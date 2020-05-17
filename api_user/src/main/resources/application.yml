@@ -1,0 +1,8 @@
+server:
+  port: 6002
+spring:
+  jackson:
+    time-zone:  GMT+8
+  application: api_user
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource

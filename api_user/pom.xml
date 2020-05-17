@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>jjjh</artifactId>
-        <groupId>com.example</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>jjjh</groupId>
+        <version>1.0</version>
     </parent>
     <groupId>com.jjjh.api</groupId>
     <artifactId>api_user</artifactId>
