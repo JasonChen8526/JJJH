@@ -16,7 +16,6 @@
     <modules>
         <module>api_user</module>
         <module>application_user</module>
-        <module>dto_user</module>
     </modules>
 
     <properties>
