@@ -3,9 +3,9 @@ server:
 eureka:
   client:
     #    禁止自己注册自己
-    register-with-eureka: true
+    register-with-eureka: false
     #    屏蔽注册信息
-    fetch-registry: true
+    fetch-registry: false
     #    服务注册中心实例的主机名
     instance:
       hostname: localhost
@@ -13,4 +13,18 @@ eureka:
       defaultZone: http://localhost:${server.port}/eureka/
 spring:
   application:
-    name: eurka_service
+    name: eurka-service
+
+#服务超时配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+#超时配置
+ribbon:
+  eureka:
+    enabled: true
+  ConnectTimeout: 30000
+  ReadTimeout: 30000

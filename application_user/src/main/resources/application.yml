@@ -1,2 +1,24 @@
 server:
-  port: 6003
+  port: 8001
+#pring相关配置
+spring:
+  profiles:
+#    使用哪个配置文件
+    active: dev
+  application:
+    name: application-user
+  jackson:
+    time-zone: GMT+8
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: zj_tx_group #自定义事务组名称需要与seata-server中的对应
+#注册eureka服务
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipaddress}:${server.port}
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+
+

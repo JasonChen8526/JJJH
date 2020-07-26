@@ -1,8 +1,14 @@
 server:
-  port: 6002
+  port: 6003
+
 spring:
-  jackson:
-    time-zone:  GMT+8
-  application: api_user
-#  datasource:
-#    type: com.zaxxer.hikari.HikariDataSource
+  profiles:
+    active: dev
+  application:
+    name: api-user
+#注册eureka服务
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipaddress}:${server.port}
+

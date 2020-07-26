@@ -1,0 +1,4 @@
+spring:
+  jackson:
+    time-zone:  GMT+8
+  application: api_user

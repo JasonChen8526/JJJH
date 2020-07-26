@@ -7,17 +7,28 @@
         <groupId>jjjh</groupId>
         <version>1.0</version>
     </parent>
-
-    <groupId>com.jjjh.api</groupId>
-    <artifactId>api_user</artifactId>
+    <groupId>com.zj</groupId>
+    <artifactId>application_data</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>api_user</name>
+    <name>data</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

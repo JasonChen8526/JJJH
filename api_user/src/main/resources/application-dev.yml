@@ -1,0 +1,8 @@
+#注册eureka服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 6
