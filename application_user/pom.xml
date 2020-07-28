@@ -10,6 +10,7 @@
     <groupId>com.jjjh.application</groupId>
     <artifactId>application_user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>application_user</name>
     <dependencies>
         <!--seata -->
         <dependency>

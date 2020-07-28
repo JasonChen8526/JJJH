@@ -22,7 +22,6 @@
         <module>application_user</module>
         <module>application_data</module>
     </modules>
-
     <properties>
         <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
         <java.version>1.8</java.version>

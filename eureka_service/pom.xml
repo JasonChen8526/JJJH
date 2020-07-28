@@ -10,9 +10,9 @@
     <!--https://blog.csdn.net/qq_24313635/article/details/104025508-->
     </parent>
     <groupId>com.jjjh</groupId>
-    <artifactId>eurka-service</artifactId>
+    <artifactId>eureka_service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eurka</name>
+    <name>eureka_service</name>
     <description>eurka注册中心</description>
 
     <properties>

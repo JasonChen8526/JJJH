@@ -10,7 +10,7 @@
     <groupId>com.zj</groupId>
     <artifactId>application_data</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>data</name>
+    <name>application_data</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
