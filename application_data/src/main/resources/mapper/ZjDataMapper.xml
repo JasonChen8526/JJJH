@@ -8,7 +8,7 @@
         <result column="CONTENT" property="content" />
     </resultMap>
     <insert id="insert" parameterType="com.zj.data.domain.ZjData">
-        insert zj_data (CONTENT) values #{content}
+        insert into zj_data (CONTENT) values (#{content})
     </insert>
 
 </mapper>

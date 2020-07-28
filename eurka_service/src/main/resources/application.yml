@@ -1,5 +1,5 @@
 server:
-  port: 6001
+  port: 7000
 eureka:
   client:
     #    禁止自己注册自己

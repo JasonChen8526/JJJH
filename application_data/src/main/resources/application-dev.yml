@@ -2,7 +2,7 @@
 spring:
   datasource:
     # master数据源配置
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/zj_data?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
@@ -16,14 +16,11 @@ spring:
         max-active: 2000
         min-idle: 300
         max-idle: 300
-
-server:
-  port: 8002
 #注册eureka服务
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:6001/eureka/
+      defaultZone: http://127.0.0.1:7000/eureka/
   instance:
     lease-renewal-interval-in-seconds: 2
     lease-expiration-duration-in-seconds: 6

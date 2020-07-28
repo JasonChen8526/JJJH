@@ -9,7 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableEurekaClient
 @EnableFeignClients
-@SpringBootApplication(scanBasePackages = {"com.zj.data.*"},exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication(scanBasePackages = {"com.zj.*"},exclude = DataSourceAutoConfiguration.class)
 public class DataApplication {
 
     public static void main(String[] args) {

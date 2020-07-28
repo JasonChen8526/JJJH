@@ -25,7 +25,8 @@ public class ZjDataController {
 
     @PostMapping("/insertData")
     public int insertData(){
-        return iZjDataService.insertData();
+        iZjDataService.insertData();
+        return 1;
     }
 }
 

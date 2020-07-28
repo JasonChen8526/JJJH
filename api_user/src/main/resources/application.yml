@@ -1,5 +1,5 @@
 server:
-  port: 6003
+  port: 7001
 
 spring:
   profiles:
@@ -11,4 +11,14 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ipaddress}:${server.port}
-
+#服务超时配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+#超时配置
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 10000

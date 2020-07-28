@@ -1,7 +1,7 @@
 package com.zj.data.config;
 
 
-import com.zaxxer.hikari.HikariDataSource;
+import com.alibaba.druid.pool.DruidDataSource;
 import io.seata.rm.datasource.DataSourceProxy;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
@@ -29,7 +29,7 @@ public class DataSourceProxyConfig {
     @Bean
     @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource druidDataSource(){
-        return new HikariDataSource();
+        return new DruidDataSource();
     }
 
     @Bean

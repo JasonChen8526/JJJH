@@ -1,7 +1,8 @@
 一. 项目端口以及介绍
-    1.eurka_service         启动端口6001
-    2.api-user              启动端口6002
-    3.application-user      启动端口6003
+    1.eurka_service         启动端口7000
+    2.api_user              启动端口7001
+    3.application_user      启动端口7002
+    4.application_data      启动端口7003
     
 
 二.技术点

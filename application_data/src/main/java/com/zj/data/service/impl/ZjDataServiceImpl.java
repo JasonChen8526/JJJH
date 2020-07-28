@@ -1,8 +1,10 @@
 package com.zj.data.service.impl;
 
 import com.zj.data.domain.ZjData;
+import com.zj.data.feign.ZjUserClient;
 import com.zj.data.repository.ZjDataMapper;
 import com.zj.data.service.IZjDataService;
+import io.seata.spring.annotation.GlobalTransactional;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -19,11 +21,15 @@ import javax.annotation.Resource;
 public class ZjDataServiceImpl implements IZjDataService {
     @Resource
     private ZjDataMapper zjDataMapper;
+    @Resource
+    private ZjUserClient zjUserClient;
 
+//    @GlobalTransactional(name = "zj_tx_group",rollbackFor = Exception.class)
     @Override
-    public int insertData() {
+    public void insertData() {
         ZjData data = new ZjData();
         data.setContent("fdfddfd");
-        return zjDataMapper.insert(data);
+        zjDataMapper.insert(data);
+        zjUserClient.insertUser();
     }
 }

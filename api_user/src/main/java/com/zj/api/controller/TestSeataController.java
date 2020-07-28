@@ -19,12 +19,9 @@ import javax.annotation.Resource;
 public class TestSeataController {
     @Resource
     private ZjDataClient zjDataClient;
-    @Resource
-    private ZjUserClient zjUserClient;
 
     @GetMapping("/test")
     public void test(){
         zjDataClient.insertData();
-        zjUserClient.insertUser();
     }
 }
