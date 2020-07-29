@@ -1,6 +1,7 @@
 package com.zj.data.service.impl;
 
 import com.zj.data.domain.ZjData;
+import com.zj.data.feign.ZjAdviceClient;
 import com.zj.data.feign.ZjUserClient;
 import com.zj.data.repository.ZjDataMapper;
 import com.zj.data.service.IZjDataService;
@@ -23,13 +24,17 @@ public class ZjDataServiceImpl implements IZjDataService {
     private ZjDataMapper zjDataMapper;
     @Resource
     private ZjUserClient zjUserClient;
+    @Resource
+    private ZjAdviceClient zjAdviceClient;
 
-//    @GlobalTransactional(name = "zj_tx_group",rollbackFor = Exception.class)
+    @GlobalTransactional(name = "seata",rollbackFor = Exception.class)
     @Override
     public void insertData() {
         ZjData data = new ZjData();
         data.setContent("fdfddfd");
         zjDataMapper.insert(data);
         zjUserClient.insertUser();
+        zjAdviceClient.insertAdvice();
+        int i = 1/0;
     }
 }

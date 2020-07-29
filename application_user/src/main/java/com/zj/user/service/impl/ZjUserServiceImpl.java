@@ -22,9 +22,9 @@ public class ZjUserServiceImpl implements IZjUserService {
 
     @Override
     public int insertUser() {
-        int i = 1/0;
         ZjUser user = new ZjUser();
         user.setUserId("43343");
-        return zjUserMapper.insert(user);
+        zjUserMapper.insert(user);
+        return 1;
     }
 }
